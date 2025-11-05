@@ -1,0 +1,10 @@
+baseURL = "https://honeytraveler.pages.dev/"
+title = "HoneyTraveler"
+languageCode = "en-us"
+theme = "ananke"
+
+[taxonomies]
+category = "categories"
+region   = "regions"
+flavor   = "flavors"
+botanical = "botanicals"
