@@ -1,10 +1,10 @@
-baseURL = "https://honeytraveler.pages.dev/"
-title = "HoneyTraveler"
+baseURL = "https://www.honeytraveler.com/"
 languageCode = "en-us"
+title = "HoneyTraveler"
 theme = "ananke"
+enableRobotsTXT = true
 
-[taxonomies]
-category = "categories"
-region   = "regions"
-flavor   = "flavors"
-botanical = "botanicals"
+[params]
+  dateFormat = "2006-01-02"
+  showReadingTime = true
+  description = "HoneyTraveler migration scaffold (reset bundle 2025-11-10 10:52)"
