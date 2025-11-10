@@ -1,1 +1,2 @@
-/content/about/**
+# Never ignore section index pages
+!**/_index.md
