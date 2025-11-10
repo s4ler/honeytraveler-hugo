@@ -1,2 +1,11 @@
+# HoneyTraveler Robots Policy
 User-agent: *
-Disallow: /
+Disallow: /drafts/
+Disallow: /_pages/
+Allow: /
+
+# Staging note:
+# On staging (hugo.honeytraveler.com) Cloudflare Pages robots.txt 
+# is overridden automatically to "Disallow: /"
+# Production domain: www.honeytraveler.com
+Sitemap: https://www.honeytraveler.com/sitemap.xml

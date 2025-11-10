@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>single</title>
+</head>
+<body>
+<pre><code class="html">{{ define &quot;main&quot; }}
+  &lt;main id=&quot;main&quot;&gt;
+    {{ .Content }}
+    {{ partial &quot;see_also.html&quot; . }}
+  &lt;/main&gt;
+{{ end }}
+</code></pre>
+</body>
+</html>

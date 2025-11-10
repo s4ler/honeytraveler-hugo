@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>List</title>
+</head>
+<body>
+<pre><code class="html">{{ define &quot;main&quot; }}
+  &lt;main id=&quot;main&quot;&gt;
+    &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+    {{ .Content }}
+    &lt;ul&gt;
+      {{ range .Pages }}
+        &lt;li&gt;&lt;a href=&quot;{{ .RelPermalink }}&quot;&gt;{{ .Title }}&lt;/a&gt;&lt;/li&gt;
+      {{ end }}
+    &lt;/ul&gt;
+  &lt;/main&gt;
+{{ end }}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>see_also</title>
+</head>
+<body>
+<pre><code class="html">{{ with .Params.see_also }}
+&lt;section aria-label=&quot;See also&quot;&gt;
+  &lt;h2&gt;See also&lt;/h2&gt;
+  &lt;ul&gt;
+    {{ range . }}
+      &lt;li&gt;&lt;a href=&quot;{{ .url }}&quot;&gt;{{ .title }}&lt;/a&gt;&lt;/li&gt;
+    {{ end }}
+  &lt;/ul&gt;
+&lt;/section&gt;
+{{ end }}
+</code></pre>
+</body>
+</html>
