@@ -72,7 +72,7 @@ summaryLength = 180
 
   [[menu.main]]
     name = "About"
-    url  = "/_pages/about/"
+    url  = "/about/"
     weight = 5
 
 # Theme parameters (Ananke)
