@@ -1,10 +1,82 @@
-baseURL = "https://www.honeytraveler.com/"
+# Hugo configuration for HoneyTraveler (Staging)
+# Checkpoint: Hugo Scaffold Build — Baseline Ready (2025-11-10)
+# Domain policy: staging on Cloudflare Pages (robots.txt disallows full crawl there)
+
+baseURL = "https://hugo.honeytraveler.com/"
+title   = "HoneyTraveler (Staging)"
 languageCode = "en-us"
-title = "HoneyTraveler"
 theme = "ananke"
 enableRobotsTXT = true
 
+# Content / rendering
+paginate = 10
+summaryLength = 180
+
+# Allow raw HTML in Markdown (for shortcodes/partials like 'see_also')
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Privacy defaults (kept strict by default)
+[privacy]
+  [privacy.youtube]
+    privacyEnhanced = true
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+
+# Taxonomies (governance-aligned)
+# Standard
+[taxonomies]
+  tag        = "tags"
+  category   = "categories"
+# HoneyTraveler custom
+  type       = "types"        # Types of Honey (Monofloral, Multifloral, Honeydew/Forest, Stingless Bee)
+  region     = "regions"      # Countries & subregions
+  botanical  = "botanicals"   # Source plants, trees, resins
+  flavor     = "flavors"      # Tasting profile terms
+
+# Permalinks per section (kept stable for migration consistency)
+[permalinks]
+  "single-flower-honey"      = "/single-flower-honey/:slug/"
+  "honey-by-country-region"  = "/honey-by-country-region/:slug/"
+  "honey-gastronomy"         = "/honey-gastronomy/:slug/"
+  "guide-to-rating-honey"    = "/guide-to-rating-honey/:slug/"
+  "honey-buyers-guide"       = "/honey-buyers-guide/:slug/"
+  "news"                     = "/news/:slug/"
+  "_pages"                   = "/:slug/"
+
+# Menus (<= 5 primary items per governance)
+[menu]
+
+  [[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Types of Honey"
+    url  = "/single-flower-honey/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Regions"
+    url  = "/honey-by-country-region/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Resources & Data"
+    url  = "/news/"
+    weight = 4
+
+  [[menu.main]]
+    name = "About"
+    url  = "/_pages/about/"
+    weight = 5
+
+# Theme parameters (Ananke)
 [params]
-  dateFormat = "2006-01-02"
-  showReadingTime = true
-  description = "HoneyTraveler migration scaffold (reset bundle 2025-11-10 10:52)"
+  description = "A clean, content‑first HoneyTraveler staging site on Hugo."
+  show_reading_time = false
+  # Social or footer links can be added later
