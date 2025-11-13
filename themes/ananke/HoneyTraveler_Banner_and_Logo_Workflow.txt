@@ -1,0 +1,58 @@
+HoneyTraveler Banner & Logo Workflow
+Version 1.1 – Linearity Curve Integration
+(Replaces Vectr-based plan)
+
+🎯 Purpose
+Create, refine, and export the HoneyTraveler logo and main site banner using Linearity Curve (iPad free plan) and integrate finished assets into the Hugo site (/static/images/brand/).
+
+🪜 Step 1 – Finalize Base Design in Looka
+1. Open Looka → adjust font, kerning, color until balanced.
+2. Export two versions:
+   • HoneyTraveler_Logo_Base.svg (vector)
+   • HoneyTraveler_Logo_Base.png (for reference)
+3. Save both to /HoneyTraveler_Website/4_Tech_Theme/brand_assets/source/.
+
+🪜 Step 2 – Import into Linearity Curve
+1. Launch Linearity Curve → + New Document (2000 × 800 px for banner layout).
+2. Tap “+ → Import → Files” and select the Looka SVG or PNG.
+3. Rename the layer “Logo.”
+4. Optional – add new text layer for tagline (Travel, Taste, Tradition).
+
+🪜 Step 3 – Tidy and Align
+• Use the Align tools to center logo and text.
+• In the Inspector, set font, letter-spacing, and color.
+• Rename layers for clarity: Logo, Text, Background.
+• Lock layers not being edited to avoid accidental moves.
+
+🪜 Step 4 – Export Assets
+Vector (Web use):
+1. Share → Export → SVG → “Optimized for Web.”
+2. Name logo.svg.
+3. Save to /HoneyTraveler_Website/4_Tech_Theme/static/images/brand/.
+
+Raster (Banner image):
+1. Share → Export → PNG (width 2000 px, transparent background).
+2. Name banner@2x.png.
+3. Save to same brand folder.
+
+🪜 Step 5 – Integrate into Hugo
+Edit front matter of /content/_index.md or site config:
+
+title: "HoneyTraveler"
+banner: "/images/brand/banner@2x.png"
+logo: "/images/brand/logo.svg"
+
+Hugo automatically pulls these from /static/images/brand/.
+
+🪜 Step 6 – Version & Archive
+• Keep each major revision (V1, V2, etc.) inside /brand_assets/versions/.
+• Add a note in the HoneyTraveler Tech Log when new art is adopted for staging.
+
+🪄 Optional Enhancements (when comfortable)
+• Use the Pen Tool (P) only for fine curve adjustments.
+• Define HoneyTraveler color palette (e.g., Gold #E1AD01, Dark Brown #3B2F2F).
+• Add subtle drop shadow under text if needed for banner contrast.
+
+💰 Version Used
+Linearity Curve Free Plan – provides full vector editing, text, layers, and web-optimized exports.
+No subscription needed for SVG/PNG output or brand asset creation.

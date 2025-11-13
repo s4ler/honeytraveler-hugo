@@ -1,0 +1,96 @@
+[frontmatter]
+date = ["date", ":filename", ":default"]
+lastmod = ["last_reviewed", "date", ":fileModTime", ":default"]
+
+# Honey Types
+[[cascade]]
+type = "honey_profile"
+_target = { path = "/types/monofloral/**" }
+[cascade.params]
+  countries = []
+  regions = []
+  review_status = "draft"
+
+[[cascade]]
+type = "honey_profile"
+_target = { path = "/types/honeydew-forest/**" }
+[cascade.params]
+  countries = []
+  regions = []
+  nectar_source = "honeydew"
+  review_status = "draft"
+
+[[cascade]]
+type = "honey_profile"
+_target = { path = "/types/stingless-bee/**" }
+[cascade.params]
+  countries = []
+  regions = []
+  review_status = "draft"
+
+# Regions
+[[cascade]]
+type = "country_honey"
+_target = { path = "/regions/*/_index.md" }
+[cascade.params]
+  has_regions = true
+  countries = []
+  regions = []
+  review_status = "draft"
+
+[[cascade]]
+type = "regional_honey"
+_target = { path = "/regions/*/*/_index.md" }
+[cascade.params]
+  countries = []
+  regions = []
+  review_status = "draft"
+
+# Content Sections
+[[cascade]]
+type = "apiculture"
+_target = { path = "/apiculture/**" }
+[cascade.params]
+  countries = []
+  regions = []
+  review_status = "draft"
+
+[[cascade]]
+type = "culture"
+_target = { path = "/culture/**" }
+[cascade.params]
+  countries = []
+  regions = []
+  review_status = "draft"
+
+[[cascade]]
+type = "page"
+_target = { path = "/about/**" }
+[cascade.params]
+  countries = ["Global"]
+  regions = []
+  review_status = "draft"
+
+[[cascade]]
+type = "news_entry"
+_target = { path = "/resources/news/**" }
+[cascade.params]
+  countries = ["Global"]
+  regions = []
+  review_status = "draft"
+
+[[cascade]]
+type = "research_entry"
+_target = { path = "/resources/research-links/**" }
+[cascade.params]
+  countries = ["Global"]
+  regions = []
+  review_status = "draft"
+
+[[cascade]]
+type = "table_dataset"
+_target = { path = "/resources/tables-statistics/**" }
+[cascade.params]
+  countries = ["Global"]
+  regions = []
+  review_status = "draft"

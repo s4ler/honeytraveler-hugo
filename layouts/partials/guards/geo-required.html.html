@@ -1,0 +1,37 @@
+{{/* 
+  HoneyTraveler Guard: geo-required.html
+  Purpose: Enforce presence of geo metadata (countries[], regions[]) for all pages
+  Version: 2025-11-11
+  Linked Governance: Region Rule – Non-Slug Form (Governance v1.1)
+*/}}
+
+{{ $countries := .Params.countries }}
+{{ $regions := .Params.regions }}
+{{ $countryName := .Params.country_name }}
+{{ $regionName := .Params.region_name }}
+
+{{ if or (not $countries) (eq (len $countries) 0) }}
+  <div class="warning">
+    ⚠️ <strong>Missing required geo field:</strong> <code>countries</code>  
+    Page: {{ .File.Path }}
+  </div>
+{{ end }}
+
+{{ if and (in .Type "regional_honey") (or (not $regions) (eq (len $regions) 0)) }}
+  <div class="warning">
+    ⚠️ <strong>Missing required geo field:</strong> <code>regions</code>  
+    Page: {{ .File.Path }}
+  </div>
+{{ end }}
+
+{{ if not $countryName }}
+  <div class="warning">
+    ⚠️ Missing display field: <code>country_name</code>
+  </div>
+{{ end }}
+
+{{ if and (in .Type "regional_honey") (not $regionName) }}
+  <div class="warning">
+    ⚠️ Missing display field: <code>region_name</code>
+  </div>
+{{ end }}
