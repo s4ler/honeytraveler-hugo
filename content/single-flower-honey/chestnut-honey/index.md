@@ -18,7 +18,7 @@ narrative: |
   This page gathers the key threads that shape chestnut honey: the botany and bloom of the chestnut tree, the forest
   companions that influence aroma and color, the differences between Mediterranean and Atlantic chestnut regions, and
   the ways cooks, shepherds, and cheesemakers have learned to use this honey’s bitterness as an asset rather than a flaw.
-draft: true
+draft: false
 ---
 
 # Chestnut Honey  
