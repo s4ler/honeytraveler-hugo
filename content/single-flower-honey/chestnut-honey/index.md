@@ -54,21 +54,24 @@ translation:
   sq: "Mjaltë gështenjë"
 
 characteristics:
-  colour: "Dark, from yellowish-brown to almost black"
+  colour: "Dark; from yellowish-brown to almost black, sometimes with amber hues"
   aroma: "Aromatic, pungent, herbal, slightly tannic"
-  flavour: "Strong aromatic taste with a slightly bitter after-taste"
+  flavour: "Strong aromatic taste, not very sweet, with a slightly bitter, persistent after-taste"
   crystallisation: "Low; high fructose content resists crystallisation"
 
 taste_profile:
   - Aromatic
   - Herbal
-  - Persistent
+  - Strong
   - Slightly Bitter
+  - Persistent
 
+# No see_also entries yet; template will still show a 'no related honeys yet' message
 see_also: []
 ---
 
 ## Festivals & Cultural Notes
+
 Italy has the most chestnut festivals, but it is also celebrated in France, Greece, Switzerland and the USA.  
 In Italy, in early Autumn, many fairs and festivals celebrate the chestnut, which for centuries was a core food.  
 Expect soups, pastas, ravioli, ciacci, chestnut cookies, gnocchi, sausages, wines, and regional specialties.
@@ -76,13 +79,17 @@ Expect soups, pastas, ravioli, ciacci, chestnut cookies, gnocchi, sausages, wine
 ## Protected Geographical Status (PGS)
 
 ### Italy – Lunigiana (Tuscany)
+
 Chestnut honey is harvested at the end of June and early July. DOP requires the honey to indicate the specific town of origin.
 
 ### Spain – Miel de Galicia
+
 Occurs primarily in Lugo and Ourense, with production also in Pontevedra.
 
 ### Spain – Miel de Granada
+
 Collected throughout the province, with migratory beekeeping during nectar flows.
 
 ## Health & Well-being
+
 Rich in trace minerals and iron, vitamins B and C; supports circulation, muscles, liver, digestion, fatigue reduction, respiratory and digestive health.
