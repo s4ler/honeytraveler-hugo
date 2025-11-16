@@ -1,8 +1,98 @@
 {{ define "main" }}
 <main id="main">
-  <h1>{{ .Title }}</h1>
-  <article>
-    {{ .Content }}
+  <article class="ht-article">
+
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Params.narrative }}
+      <section class="ht-narrative">
+        {{ . | markdownify }}
+      </section>
+    {{ end }}
+
+    {{ with .Params.botanical_name }}
+      <p class="ht-meta-line"><strong>Botanical name:</strong> {{ . }}</p>
+    {{ end }}
+
+    {{ if or .Params.country_name .Params.region_name }}
+      <p class="ht-meta-line">
+        <strong>Origin:</strong>
+        {{ with .Params.country_name }}{{ . }}{{ end }}
+        {{ if and .Params.country_name .Params.region_name }} – {{ end }}
+        {{ with .Params.region_name }}{{ . }}{{ end }}
+      </p>
+    {{ end }}
+
+    {{ with .Params.translation }}
+      <section class="ht-translations">
+        <h2>Translations</h2>
+        <dl>
+          {{ range $lang, $val := . }}
+            <div class="ht-translation">
+              <dt>{{ $lang }}</dt>
+              <dd>{{ $val }}</dd>
+            </div>
+          {{ end }}
+        </dl>
+      </section>
+    {{ end }}
+
+    {{ with .Params.characteristics }}
+      <section class="ht-characteristics">
+        <h2>Characteristics</h2>
+        <dl>
+          {{ with .colour }}
+            <div><dt>Colour</dt><dd>{{ . }}</dd></div>
+          {{ end }}
+          {{ with .aroma }}
+            <div><dt>Aroma</dt><dd>{{ . }}</dd></div>
+          {{ end }}
+          {{ with .flavour }}
+            <div><dt>Flavour</dt><dd>{{ . }}</dd></div>
+          {{ end }}
+          {{ with .crystallisation }}
+            <div><dt>Crystallisation</dt><dd>{{ . }}</dd></div>
+          {{ end }}
+        </dl>
+      </section>
+    {{ end }}
+
+    {{ with .Params.taste_profile }}
+      <section class="ht-taste-profile">
+        <h2>Taste profile</h2>
+        <ul>
+          {{ range . }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
+
+    <section class="ht-body">
+      {{ .Content }}
+    </section>
+
+    <section class="ht-see-also">
+      <h2>See also</h2>
+      {{ with .Params.see_also }}
+        {{ if gt (len .) 0 }}
+          <ul>
+            {{ range . }}
+              {{ $url := .url | default "" }}
+              {{ $label := .label | default "" }}
+              {{ if and $url $label }}
+                <li><a href="{{ $url }}">{{ $label }}</a></li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        {{ else }}
+          <p>No related honeys added yet.</p>
+        {{ end }}
+      {{ else }}
+        <p>No related honeys added yet.</p>
+      {{ end }}
+    </section>
+
   </article>
 </main>
 {{ end }}
